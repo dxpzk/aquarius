@@ -1,0 +1,15 @@
+rocketmq:
+  # 生产者配置
+  producer:
+    groupName: topic-test
+    namesrvAddr: 127.0.0.1:9876
+    maxMessageSize: 4096
+    sendMsgTimeout: 3000
+    retryTimesWhenSendFailed: 2
+  consumer:
+    topics: dxpzk
+    groupName: topic-test
+    namesrvAddr: 127.0.0.1:9876
+    consumeThreadMin: 20
+    consumeThreadMax: 64
+    consumeMessageBatchMaxSize: 1

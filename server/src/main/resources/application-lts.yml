@@ -1,0 +1,25 @@
+lts:
+  tasktracker:
+    job-runner-class: com.github.ltsopensource.spring.tasktracker.JobDispatcher
+    cluster-name: test_cluster
+    registry-address: zookeeper://127.0.0.1:2181
+    node-group: test_TaskTracker
+    dispatch-runner:
+      enable: true
+      shard-field: taskId
+    configs:
+      job:
+        fail:
+          store: mapdb
+  jobtracker:
+    cluster-name: test_cluster
+    listen-port: 35001
+    registry-address: zookeeper://127.0.0.1:2181
+    configs:
+      job:
+        logger: mysql
+        queue: mysql
+      jdbc:
+        url: jdbc:mysql://localhost:3306/dxpzk1
+        username: root
+        password:

@@ -1,0 +1,14 @@
+server:
+  port: 8088
+
+spring:
+  profiles:
+    include: mybatis, dubbo, redis, pagehelper, sharingjdbc, rocketmq, lts
+
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/dxpzk1 #url
+#    username: root  #用户名
+#    password:   #密码
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+

@@ -1,0 +1,10 @@
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.aquarius.model
+  configuration:
+    cache-enabled: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.aquarius.mapper: DEBUG
